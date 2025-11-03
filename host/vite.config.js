@@ -33,14 +33,8 @@ export default defineConfig({
       shared: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'],
     }),
   ],
-  optimizeDeps: {
-    exclude: ['quill'],  // 👈 this prevents Vite from trying to pre-bundle Quill
-  },
   server: { port: 5173 },
   build: {
     target: 'esnext',
-    rollupOptions: {
-      external: ['quill'], // 👈 tell Rollup to ignore missing quill
-    },
   },
 })
