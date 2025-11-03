@@ -21,13 +21,13 @@ export default defineConfig({
     federation({
       remotes: {
         crm: env
-          ? 'https://mukhesh4416.github.io/crm/assets/crmEntry.js'
+          ? 'https://mukhesh4416.github.io/mfe/crm/assets/crmEntry.js'
           : 'http://localhost:5174/assets/crmEntry.js',
         scm: env
-          ? 'https://mukhesh4416.github.io/scm/assets/scmEntry.js'
+          ? 'https://mukhesh4416.github.io/mfe/scm/assets/scmEntry.js'
           : 'http://localhost:5175/assets/scmEntry.js',
         pmc: env
-          ? 'https://mukhesh4416.github.io/pmc/assets/pmcEntry.js'
+          ? 'https://mukhesh4416.github.io/mfe/pmc/assets/pmcEntry.js'
           : 'http://localhost:5176/assets/pmcEntry.js',
       },
       shared: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'],
