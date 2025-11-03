@@ -19,14 +19,8 @@ export default defineConfig({
     build: {
         target: 'esnext',
         minify: false,
-        lib: {
-            entry: './src/index.js',   // ⚡ Entry for global utils
-            name: 'shared',
-            fileName: 'sharedEntry',   // will output sharedEntry.js
-            formats: ['es'], 
-        },
         rollupOptions: {
-            external: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'], // avoid bundling these
+            external: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'],
         },
     },
 })
