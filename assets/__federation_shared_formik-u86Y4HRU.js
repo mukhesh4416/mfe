@@ -1,4 +1,4 @@
-import { importShared } from './__federation_fn_import-CfLc8zB7.js';
+import { importShared } from './__federation_fn_import-BMzKN-Tt.js';
 import { g as getDefaultExportFromCjs } from './_commonjsHelpers-B85MJLTf.js';
 
 var isMergeableObject = function isMergeableObject(value) {
