@@ -8,20 +8,32 @@ const prod2 = "https://mukhesh4416.github.io/assets/index-CMF_dOlt.js"
 const prod3 = "https://mukhesh4416.github.io/assets/index-DmXJ6iaW.js"
 const env = true
 
+// remotes: {
+//     crm: `${env?prod1:"http://localhost:5174/"}assets/crmEntry.js`,
+//     scm: `${env?prod2:"http://localhost:5175/"}assets/scmEntry.js`,
+//     pmc: `${env?prod3:"http://localhost:5176/"}assets/pmcEntry.js`,
+//   },
+
 export default defineConfig({
   base: '/mfe/',
   plugins: [
     react(),
     federation({
       remotes: {
-        crm: `${env?prod1:"http://localhost:5174/"}assets/crmEntry.js`,
-        scm: `${env?prod2:"http://localhost:5175/"}assets/scmEntry.js`,
-        pmc: `${env?prod3:"http://localhost:5176/"}assets/pmcEntry.js`,
+        crm: env
+          ? 'https://mukhesh4416.github.io/crm/assets/crmEntry.js'
+          : 'http://localhost:5174/assets/crmEntry.js',
+        scm: env
+          ? 'https://mukhesh4416.github.io/scm/assets/scmEntry.js'
+          : 'http://localhost:5175/assets/scmEntry.js',
+        pmc: env
+          ? 'https://mukhesh4416.github.io/pmc/assets/pmcEntry.js'
+          : 'http://localhost:5176/assets/pmcEntry.js',
       },
       shared: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'],
     }),
   ],
-   optimizeDeps: {
+  optimizeDeps: {
     exclude: ['quill'],  // 👈 this prevents Vite from trying to pre-bundle Quill
   },
   server: { port: 5173 },
