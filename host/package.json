@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+   "homepage": "https://mukhesh4416.github.io/mfe",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.3.1",
@@ -15,6 +18,7 @@
     "axios": "^1.12.2",
     "bootstrap": "^5.3.8",
     "formik": "^2.4.6",
+    "gh-pages": "^6.3.0",
     "moment": "^2.30.1",
     "primeicons": "^7.0.0",
     "primereact": "^10.9.7",
