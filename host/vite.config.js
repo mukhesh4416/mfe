@@ -2,14 +2,18 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
 
+const prod = "https://mukhesh4416.github.io"
+const env = true
+
 export default defineConfig({
+  base: '/mfe/',
   plugins: [
     react(),
     federation({
       remotes: {
-        crm: 'http://localhost:5174/assets/crmEntry.js',
-        scm: 'http://localhost:5175/assets/scmEntry.js',
-        pmc: 'http://localhost:5176/assets/pmcEntry.js',
+        crm: `${env?prod:"http://localhost:5174/"}assets/crmEntry.js`,
+        scm: `${env?prod:"http://localhost:5175/"}assets/scmEntry.js`,
+        pmc: `${env?prod:"http://localhost:5176/"}assets/pmcEntry.js`,
       },
       shared: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'],
     }),
