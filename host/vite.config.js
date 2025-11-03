@@ -20,6 +20,7 @@ export default defineConfig({
     react(),
     federation({
       remotes: {
+         shared: 'https://mukhesh4416.github.io/mfe/shared/assets/sharedEntry.js',
         crm: env
           ? 'https://mukhesh4416.github.io/mfe/crm/assets/crmEntry.js'
           : 'http://localhost:5174/assets/crmEntry.js',
