@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react'
 import federation from '@originjs/vite-plugin-federation'
 
 const prod = "https://mukhesh4416.github.io"
+const prod1 = "https://mukhesh4416.github.io/assets/index-XqJQp53A.js"
+const prod2 = "https://mukhesh4416.github.io/assets/index-CMF_dOlt.js"
+const prod3 = "https://mukhesh4416.github.io/assets/index-DmXJ6iaW.js"
 const env = true
 
 export default defineConfig({
@@ -11,9 +14,9 @@ export default defineConfig({
     react(),
     federation({
       remotes: {
-        crm: `${env?prod:"http://localhost:5174/"}assets/crmEntry.js`,
-        scm: `${env?prod:"http://localhost:5175/"}assets/scmEntry.js`,
-        pmc: `${env?prod:"http://localhost:5176/"}assets/pmcEntry.js`,
+        crm: `${env?prod1:"http://localhost:5174/"}assets/crmEntry.js`,
+        scm: `${env?prod2:"http://localhost:5175/"}assets/scmEntry.js`,
+        pmc: `${env?prod3:"http://localhost:5176/"}assets/pmcEntry.js`,
       },
       shared: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'],
     }),
