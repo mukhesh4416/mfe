@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-   "homepage": "https://mukhesh4416.github.io/mfe",
+  "homepage": "https://mukhesh4416.github.io/mfe",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,6 +18,7 @@
     "axios": "^1.12.2",
     "bootstrap": "^5.3.8",
     "formik": "^2.4.6",
+    "gh-pages": "^6.3.0",
     "moment": "^2.30.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
