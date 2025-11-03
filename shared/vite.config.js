@@ -11,7 +11,7 @@ export default defineConfig({
             exposes: {
                 './shared': './src/index.js',
             },
-            shared: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap', 'primereact', 'primeicons'],
+            shared: ['react', 'react-dom', 'formik', 'yup', 'axios', 'bootstrap'],
         }),
     ],
     server: { port: 5177 },
